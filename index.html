@@ -5,15 +5,38 @@
         <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     </head>
     <body>
-        <div id="root"></div>
-        <script type="text/babel">
+        <div id="root"></div> 
+        <script type="text/babel">  //Location of React code. <div> above marks entry point for application. Entire application lives below.
             class Hello extends React.Component {
+                constructor() { 
+                    super(); //Must be called because 'this' is uninitialized before super() is called.
+                    this.state = {
+                        message: "my friend (from state)" //Initializing state in component contructor;
+                    };
+                    this.updateMessage = this.updateMessage.bind(this); //Binding 'this' keyword to the 'updateMessage' method, otherwise would'nt be able to access 'this' in the method.
+                }
+                updateMessage (){
+                    if(this.state.message == "my friend (from state)") {
+                        this.setState({
+                            message: "my friend (from changed state)"
+                        })
+                    } else {
+                        this.setState({
+                            message: "my friend (from state)"
+                        })
+                    }
+                }
                 render() {
-                    return <h1>Hello {this.props.message}!</h1>;
+                    return (
+                        <div>
+                            <h1>Hello {this.state.message}!</h1>
+                            <button onClick={this.updateMessage}>Click me!</button>
+                        </div>
+                    )    
                 }
             }
             ReactDOM.render(
-                <Hello message="my friend" />, //This is an example of passing props to a component.
+                <Hello message="my friend" />, //Example of passing props to a component;
                 document.getElementById("root")
             );
         </script>
