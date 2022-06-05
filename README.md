@@ -2,8 +2,8 @@
 React application to practice the usage of Props and States.
 ## Major Takeaways:
 1. "States" are private and can be changed from within a component.
-2. "Props" are external, and not controlled by a component itself. They are passed down from components high up the hierarchy, who also control the data.
-3. A component can change its internal states directly. It can change change its props directly.
+2. "Props" are external, and not controlled by a component itself. They are passed down from components higher up the hierarchy, who also control the data.
+3. A component can change its internal states directly. It cannot change its props directly.
 ## Language(s):
 - HTML
 - JavaScript
