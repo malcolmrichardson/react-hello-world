@@ -1,5 +1,5 @@
 # react-hello-world
-Web application to practice/demonstrate Authentication and Authorization using Flask.
+React application to practice the usage of Props and States.
 ## Major Takeaways:
 1. "States" are private and can be changed from within a component.
 2. "Props" are external, and not controlled by a component itself. They are passed down from components high up the hierarchy, who also control the data.
@@ -9,6 +9,13 @@ Web application to practice/demonstrate Authentication and Authorization using F
 - JavaScript
 ## Libraries:
 - React
+## Installation/Setup
+Run the below commands in your terminal / command line:
+```
+cd ...
+git clone https://github.com/malcolmrichardson/react-hello-world.git
+cd react-hello-world
+```
 ## Usage
 Open `index.html` in your browser of choice. Enjoy and thank you!
 ## Screenshots/Images:
